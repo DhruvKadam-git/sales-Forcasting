@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <script src="features.js" defer></script>
 </head>
 <body class="show-chatbot">
+    <button id="toggle-dark-mode">Toggle Dark Mode</button>
     <button class="chatbot-toggler">
         <span class="material-symbols-outlined">mode_comment</span>
         <span class="material-symbols-outlined">close</span>
@@ -33,14 +33,13 @@
         </div>
     </div>
     <div class="container">
-        <!-- <aside section start -->
+        <!-- Aside section start -->
         <aside>
             <div class="top">
                 <div class="logo">
-                    <h2><span class="danger">SALES FORCASTING</span></h2>
+                    <h2><span class="danger">UNSTOP</span></h2>
                 </div>
-                <div class="logo"></div>
-                <div class="close">
+                <div class="close" id="close_btn">
                     <span class="material-symbols-outlined">close</span>
                 </div>
             </div>
@@ -49,30 +48,53 @@
                     <span class="material-symbols-outlined">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <!-- <a href="#">
-                    <span class="material-symbols-outlined">insights</span>
-                    <h3>Analytics</h3>
+               <!----<a href="#" class="active">
+                    <span class="material-symbols-outlined">person_outline</span>
+                    <h3>Customer</h3>
                 </a>
                 <a href="#">
-                    <span class="material-symbols-outlined">settings</span>
-                    <h3>Settings</h3>
+                    <span class="material-symbols-outlined">insights</span>
+                    <h3>Analytics</h3>-->
                 </a>
+                <!--<a href="#">
+                    <span class="material-symbols-outlined">mail_outline</span>
+                    <h3>Messages</h3>
+                    <span class="msg_count">14</span>
+                </a>-->
+              <!--  <a href="#">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <h3>Products</h3>
+                </a>-->
+                <!--<a href="#">
+                    <span class="material-symbols-outlined">report_gmailerrorred</span>
+                    <h3>Reports</h3>
+                </a>-->
+               <!--<a href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>-->
+                </a>
+               <!---<a href="#">
+                    <span class="material-symbols-outlined">add</span>
+                    <h3>Add Product</h3>
+                </a>-->
                 <a href="#">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
-                </a> -->
+                </a>
             </div>
         </aside>
-        <!-- <aside section end -->
+        <!-- Aside section end -->
 
-        <!-- main section start -->
+        <!-- Main section start -->
         <main>
             <h1>Dashboard</h1>
             <div class="date">
                 <input type="date">
             </div>
+            <span id="current-date"></span>
+
             <div class="insights">
-                <!-- start sales -->
+                <!-- Sales -->
                 <div class="sales">
                     <span class="material-symbols-outlined">trending_up</span>
                     <div class="middle">
@@ -89,8 +111,7 @@
                     </div>
                     <small>Last 24 Hours</small>
                 </div>
-                <!-- end sales -->
-                <!-- start expenses -->
+                <!-- Expenses -->
                 <div class="expenses">
                     <span class="material-symbols-outlined">local_mall</span>
                     <div class="middle">
@@ -107,8 +128,7 @@
                     </div>
                     <small>Last 24 Hours</small>
                 </div>
-                <!-- end expenses -->
-                <!-- start income -->
+                <!-- Income -->
                 <div class="income">
                     <span class="material-symbols-outlined">stacked_line_chart</span>
                     <div class="middle">
@@ -125,82 +145,80 @@
                     </div>
                     <small>Last 24 Hours</small>
                 </div>
-                <!-- end income -->
             </div>
         </main>
-    </div>
-    <!-- main section end -->
-    <!-- right section start -->
-    <div class="right">
-        <div class="top">
-            <button id="menu_bar">
-                <span class="material-symbols-sharp">menu</span>
-            </button>
-            <div class="theme-toggler">
-                <span class="material-symbols-sharp active">light_mode</span>
-                <span class="material-symbols-sharp">dark_mode</span>
-            </div>
-            <div class="profile">
-                <div class="info">
-                    <p><b>Babbar</b></p>
-                    <p>Admin</p>
-                    <small class="text-muted"></small>
+        <!-- Main section end -->
+
+        <!-- Right section start -->
+        <div class="right">
+            <div class="top">
+                <button id="menu_bar"> 
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
                 </div>
-                <div class="profile-photo">
-                    <img src="image(forcasting).jpg" alt="Forecasting Image">
-                </div>
-            </div>
-        </div>
-        <!--end top -->
-        <!-- start recent update -->
-        <div class="recent_updates">
-            <h2>Recent Updates</h2>
-            <div class="updates">
-                <div class="profile-photo">
-                    <img src="image2(forcasting).jpg" alt="">
-                </div>
-                <div class="message">
-                    <p><b>Babbar</b> received his order</p>
-                </div>
-            </div>
-            <div class="updates">
-                <div class="profile-photo">
-                    <img src="image2(forcasting).jpg" alt="">
-                </div>
-                <div class="message">
-                    <p><b>Babbar</b> received his order</p>
-                </div>
-            </div>
-            <div class="updates">
-                <div class="profile-photo">
-                    <img src="image2(forcasting).jpg" alt="">
-                </div>
-                <div class="message">
-                    <p><b>Babbar</b> received his order</p>
-                </div>
-            </div>
-        </div>
-        <!-- end recent update -->
-        <!-- start sale analytic -->
-        <div class="sales_analytics">
-            <h2>Sales Analytics</h2>
-            <div class="item online">
-                <div class="icon">
-                    <span class="material-symbols-sharp">shopping_cart</span>
-                </div>
-                <div class="right_text">
+                <div class="profile">
                     <div class="info">
-                        <h3>Online Orders</h3>
-                        <small class="text-muted">Last seen 2 Hours</small>
+                        <p><b>Babbar</b></p>
+                        <p>Admin</p>
                     </div>
-                    <h5 class="danger">-17%</h5>
-                    <h3>3849</h3>
+                    <div class="profile-photo">
+                        <img src="image(forcasting).jpg" alt="Forecasting Image">
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Updates -->
+            <div class="recent_update">
+                <h2>Recent Updates</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="image2(forcasting).jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Babbar</b> received his order</p>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="forcasting image3.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Babbar</b> received his order</p>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="image4.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Babbar</b> received his order</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sales Analytics -->
+            <div class="sales_analytics">
+                <h2>Sales Analytics</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Online Orders</h3>
+                            <small class="text-muted">Last seen 2 Hours</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>3849</h3>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- end sale analytic -->
+        <!-- Right section end -->
     </div>
-    <!-- end right section -->
-</div>
+    <script src="script.js"></script>
 </body>
 </html>
